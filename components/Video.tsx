@@ -1,4 +1,4 @@
-import styles from "../styles/works.module.css"
+import styles from "../styles/content.module.css"
 import { FC } from 'react'
 
 interface IVideoProps {
