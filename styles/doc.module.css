@@ -1,0 +1,185 @@
+.containerGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+
+  /* grid-gap: 10px; */
+}
+
+.title {
+  margin: 0;
+  font-family: "PP Neue Montreal", sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.videoGrid {
+  width: 70%;
+  margin-bottom: 35px;
+}
+
+.containerCover {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+}
+
+.singleVideoWrapper {
+  position: relative;
+  margin-bottom: 119px;
+}
+
+.textTitle {
+  font-weight: 500;
+}
+
+
+.leftControl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightControl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoContainer {
+  position: relative;
+  z-index: 100;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.videoWrapper {
+  position: relative;
+  z-index: 100;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.videoOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+}
+
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+
+.videoContainer iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.imgDark {
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  transition: brightness 0.8s ease-in-out;
+  object-fit: cover;
+}
+
+.imgDarkWrapper {
+  position: absolute;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  filter: blur(5px);
+  transition: filter 0.8s ease-in-out;
+  object-fit: cover;
+
+}
+
+.imgLight {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: brightness 0.8s ease-in-out;
+}
+
+
+.textOverlay {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  z-index: 3000;
+  font-size: larger;
+  font-weight: 300;
+  color: rgb(255 255 255 / 0%);
+  transition: color 0.3s ease-in-out;
+  transform: translate(-50%, -50%);
+}
+
+
+.videoContainer:hover .imgLight {
+  filter: brightness(30%);
+  transition: filter 0.3s, brightness 0.3s;
+}
+
+.videoContainer:hover .imgDark {
+  filter: brightness(30%);
+  transition: filter 0.3s, brightness 0.3s;
+}
+
+.videoContainer:hover .textOverlay {
+  color: rgb(255 255 255);
+  transition: color 0.3s ease-in-out;
+}
+
+
+@media (width <=768px) {
+  .containerGrid {
+    display: grid;
+    grid-template-columns: 100%;
+
+    /* grid-gap: 10px; */
+  }
+
+  .videoGrid {
+    width: 92%;
+    margin-bottom: 35px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+}
+
+@media (width <=840px) {
+  .textOverlay {
+    font-size: larger;
+    font-weight: 300;
+  }
+
+  .title {
+    font-size: 25px;
+  }
+}
+
+/* .videoContainer img:hover {
+  filter: opacity(70%);
+} */

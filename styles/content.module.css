@@ -1,0 +1,287 @@
+.containerGrid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 14px;
+}
+
+.videoWrapperBig {
+   height: 2000px;
+}
+
+.containerDocGrid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 14px;
+}
+
+.videoGrid {
+   width: 70%;
+   margin-bottom: 35px;
+}
+
+.leftArrow {
+   height: 40px;
+}
+
+.rightArrow {
+   height: 40px;
+}
+
+.hWrapper {
+   width: 80%;
+   height: 185px;
+   margin: auto;
+}
+
+
+.containerCover {
+   display: grid;
+   grid-template-columns: 10% 80% 10%;
+
+
+}
+
+.singleVideoWrapper {
+   position: relative;
+
+}
+
+.textTitle {
+   font-size: larger;
+   font-weight: 300;
+}
+
+.title {
+   margin: 0;
+   font-family: "PP Neue Montreal", sans-serif;
+   font-size: 64px;
+   font-style: normal;
+   font-weight: 400;
+   line-height: normal;
+   color: #000;
+   text-transform: uppercase;
+}
+
+
+.leftControl {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.rightControl {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.rightControl path:hover {
+   stroke: rgb(114 114 114);
+}
+
+.leftControl path:hover {
+   stroke: rgb(114 114 114);
+}
+
+
+.videoContainer {
+   position: relative;
+   z-index: 100;
+   height: 0;
+   padding-bottom: 56.25%;
+   overflow: hidden;
+}
+
+
+.videoOverlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   width: 100%;
+   height: 100%;
+}
+
+
+
+.playButton {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   cursor: pointer;
+   transform: translate(-50%, -50%);
+}
+
+
+.videoContainer iframe {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
+.videoContainer video {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+   transition: filter 0.3s ease-in-out;
+
+}
+
+.videoContainer img {
+   transition: filter 0.3s ease-in-out;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   object-fit: contain;
+}
+
+.textOverlay {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   z-index: 3000;
+   font-size: larger;
+   font-weight: 300;
+   color: rgb(255 255 255 / 0%);
+   transition: color 0.3s ease-in-out;
+   transform: translate(-50%, -50%);
+
+}
+
+.videoContainer:hover video {
+   filter: brightness(30%);
+}
+
+.videoContainer:hover img {
+   filter: brightness(30%);
+}
+
+.videoContainer:hover .textOverlay {
+   color: rgb(255 255 255);
+   transition: color 0.3s ease-in-out;
+}
+
+.shapes {
+   width: 400px;
+   height: 400px;
+   margin: auto;
+   color: #D1631A;
+   background:
+      linear-gradient(currentcolor 0 0),
+      linear-gradient(currentcolor 0 0),
+      linear-gradient(currentcolor 0 0),
+      linear-gradient(currentcolor 0 0);
+   background-repeat: no-repeat;
+   background-size: 210px 210px;
+   animation: sh5 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+@keyframes sh5 {
+   0% {
+      background-position: 0 0, 100% 0, 100% 100%, 0 100%
+   }
+
+   33% {
+      width: 600px;
+      height: 600px;
+      background-position: 0 0, 100% 0, 100% 100%, 0 100%
+   }
+
+   66% {
+      width: 600px;
+      height: 600px;
+      background-position: 100% 0, 100% 100%, 0 100%, 0 0
+   }
+
+   100% {
+      background-position: 100% 0, 100% 100%, 0 100%, 0 0
+   }
+}
+
+
+
+
+
+@media (width <=840px) {
+   .containerGrid {
+      display: grid;
+      grid-template-columns: 100%;
+
+      /* grid-gap: 10px; */
+   }
+
+   .hWrapper {
+      width: 80%;
+      height: 80px;
+      margin: auto;
+   }
+
+
+   .videoGrid {
+      width: 92%;
+      margin-bottom: 35px;
+   }
+
+   .title {
+      width: 281px;
+      margin-top: 4px;
+      font-size: 45px;
+   }
+
+}
+
+@media (width <=840px) {
+   .textTitle {
+      font-size: larger;
+      font-weight: 300;
+   }
+
+   .title {
+      font-size: 25px;
+   }
+
+   .shapes {
+      width: 80px;
+      height: 80px;
+      margin: auto;
+      margin-top: 40px;
+      color: #D1631A;
+      background:
+         linear-gradient(currentcolor 0 0),
+         linear-gradient(currentcolor 0 0),
+         linear-gradient(currentcolor 0 0),
+         linear-gradient(currentcolor 0 0);
+      background-repeat: no-repeat;
+      background-size: 42px 42px;
+      animation: sh5 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+   }
+
+   @keyframes sh5 {
+      0% {
+         background-position: 0 0, 100% 0, 100% 100%, 0 100%
+      }
+
+      33% {
+         width: 120px;
+         height: 120px;
+         background-position: 0 0, 100% 0, 100% 100%, 0 100%
+      }
+
+      66% {
+         width: 120px;
+         height: 120px;
+         background-position: 100% 0, 100% 100%, 0 100%, 0 0
+      }
+
+      100% {
+         background-position: 100% 0, 100% 100%, 0 100%, 0 0
+      }
+   }
+}
+
+/* .videoContainer img:hover {
+  filter: opacity(70%);
+} */

@@ -1,0 +1,16 @@
+.contacts {
+  display: grid;
+  width: 80%;
+  margin: auto;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contacts a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+}
+
+.socialIcon {
+  height: 30px;
+}
